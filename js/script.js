@@ -1,11 +1,21 @@
 function init(){
-//add your javascrip between these two lines of code
- 
+  // add your javascrip between these two lines of code
+  // alert('Hello Tri');
+  function click_alert() {
+    // Get user input.
+    var user_input = document.getElementById("entryinput").value;
+    // Overwrite content with user's input
+    document.getElementById("textoutput").innerHTML = user_input;
+    // Get my name from h2 center class.
+    var name =  document.querySelector("h2.center").item(0).innerHTML;
+    // Put the message together for alert.
+    msg = name + ":" + user_input;
+    alert(msg); // Show alert box pops up.
+  }
 
-
-
-
-
-
+  // Get element with ID attribute "entrybutton".
+  var alert_me = document.getElementById('entrybutton');
+  // Call click_alert function when user clicks Alert Me button.
+  alert_me.addEventListener('click', click_alert);
 
 window.addEventListener('load', init);
