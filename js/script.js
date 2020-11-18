@@ -7,9 +7,10 @@ function init(){
     // Overwrite content with user's input
     document.getElementById("textoutput").innerHTML = user_input;
     // Get my name from h2 center class.
-    var name =  document.querySelector("h2.center").item(0).innerHTML;
+    // var name =  document.querySelector("h2.center").item(0).innerHTML;
+    var name =  document.querySelector("h2.center").innerHTML;
     // Put the message together for alert.
-    msg = name + ":" + user_input;
+    var msg = name + ":" + user_input;
     alert(msg); // Show alert box pops up.
   }
 
@@ -18,4 +19,5 @@ function init(){
   // Call click_alert function when user clicks Alert Me button.
   alert_me.addEventListener('click', click_alert);
 
-window.addEventListener('load', init);
+  window.addEventListener('load', init);
+}
